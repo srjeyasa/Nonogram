@@ -9,7 +9,7 @@ For example, in the image below, the first row contains 4 consecutive filled squ
   <img src = "/images/plain_nonogram.JPG", width = 400>
 </p>
 
-A game in progress and the finished game board are shown below. A selected square is filled with green. Users can also 'flag' squares that they think should be left blank by right-clicking on the square. These are flagged squares are filled with grey.
+A game in progress and the finished game board are shown below. A selected square is filled with green. Users can also 'flag' squares that they think should be left blank by right-clicking on the square. These are filled with grey.
 
 <p align = "CENTER">
   <img src = "/images/part_filled_nonogram.JPG", width = 400>
