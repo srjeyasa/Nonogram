@@ -1,13 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[1]:
-
 from PIL import Image
 import numpy as np
 import pygame
-
-# In[3]:
 
 def binarize_array(numpy_array, threshold=200):
     """Binarize a numpy array."""
@@ -28,9 +21,6 @@ def binarize_image(img_name, threshold):
     image = binarize_array(image, threshold)
     return image.ravel()
 
-
-# In[4]:
-
 #Image size = edge_length x edge_length
 #this also sets the size of the game board
 edge_length = 10
@@ -41,8 +31,6 @@ image = binarize_image("example.JPG", 130)
 
 #reshape to 2D matrix
 image = image.reshape(dim)
-
-# In[7]:
    
 class Block:
     """
@@ -60,7 +48,6 @@ class Block:
     def __init__(self, inImage):
         self.inImage = inImage
         
-# In[8]:
 block_list = np.empty(dim, dtype=object) #array to store all blocks
 
 #array to store the number tags for each row
@@ -102,9 +89,6 @@ for i in range(edge_length):
 
 #transpose to match screen coordinates
 block_list = block_list.T
-                
-# In[11]:
-
 pygame.init()
 
 #screen width and height
@@ -125,7 +109,6 @@ bgColor = (255,255,255)
 
 screen = pygame.display.set_mode((width,height))
 screen.fill(bgColor)
-
 pygame.display.set_caption('Nonogram') 
 
 #size of each block
@@ -145,7 +128,6 @@ def get_idx(mouseX, mouseY):
 for i in range(edge_length):
         for j in range(edge_length):
             pygame.draw.rect(screen, lineColor, (start_x+(square_size*i), start_y+(square_size*j), square_size, square_size), 1)
-
 
 font = pygame.font.Font('freesansbold.ttf', 16)
 done_font = pygame.font.Font('freesansbold.ttf', 48)
