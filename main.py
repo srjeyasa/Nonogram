@@ -38,7 +38,7 @@ class Block:
     chosen by user, flagged by user and not chosen and not flagged.
     if chosen = 1 => flag = 0 and vice versa
     
-    Each block also has attribut inImage to store whether that block is in the image.
+    Each block also has attribute inImage to store whether that block is in the image.
     """ 
     chosen = False #chosen/not chosen by user 
     flag = False #users can flag by right clicking
